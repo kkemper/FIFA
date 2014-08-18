@@ -25,6 +25,21 @@ app.get('/', function(req, res){
 app.get('/about', function(req, res){
 	res.render('about', {pageTestScript:'/qa/tests-about.js'});
 });
+
+//create a team
+app.get('/team/create', function(req, res){
+	res.render('team/create');
+});
+
+//edit a team
+app.get('/team/edit', function(req, res){
+	res.render('team/edit');
+});
+
+//support page
+app.get('/support', function(req, res){
+	res.render('support');
+});
 	
 //custom 404 page
 app.use(function(req, res){

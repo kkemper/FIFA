@@ -1,4 +1,5 @@
 var express = require('express');
+var fortune = require('./lib/fortune.js');
 
 var app = express();
 
@@ -23,7 +24,7 @@ app.get('/', function(req, res){
 
 //about page
 app.get('/about', function(req, res){
-	res.render('about', {pageTestScript:'/qa/tests-about.js'});
+	res.render('about', {fortune: fortune.getFortune(), pageTestScript:'/qa/tests-about.js'});
 });
 
 //create a team

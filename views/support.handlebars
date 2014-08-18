@@ -1,0 +1,26 @@
+<h1>Support</h1>
+
+<h2>Contact Support</h2>
+
+<form role="form" style="margin:0 10%;">
+	<input type="hidden" name="referrer">
+	<div class="form-group">
+		<label for="fieldName">Name:</label> 
+		<input type="text" id="fieldName" name="name" class="form-control" placeholder="Enter Name">
+	</div>
+	<div class="form-group">
+		<label for="email">Email:</label> 
+		<input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
+	</div>
+	<div class="form-group">
+		<label for="issue">Issue:</label> 
+		<textarea type="text" id="issue" name="issue" class="form-control" rows="10" placeholder="Describe the Issue"></textarea>
+	</div>
+	<input type="submit" value="Submit" class="btn btn-primary btn-lg">
+</form>
+
+<script>
+	$(document).ready(function(){
+		$('input[name="referrer"]').val(document.referrer);
+	});
+</script>

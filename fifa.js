@@ -59,3 +59,14 @@ app.listen(app.get('port'), function(){
 	console.log( 'Express started on http://localhost: ' + app.get('port') + '; press Ctrl-C to terminate.' );
 });
 
+//Check Request Header Info
+app.get('/headers', function(req, res){
+	res.set('Content-Type', 'text/plain');
+	var s= '';
+	for(var name in req.headers) s += name + ':' + req.headers[name] + '\n';
+	res.send(s);
+});
+
+//Disable Express's X-Powered-By header
+app.disable('x-powered-by');
+
